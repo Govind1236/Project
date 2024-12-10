@@ -7,5 +7,7 @@ def about(request):
     return HttpResponse('This is about page')
 def contact(req):
     return HttpResponse("Its an contact page")
+def Index(req):
+    return HttpResponse("<marquee><h1> You are at index page </h1> </marquee>")
 
  
