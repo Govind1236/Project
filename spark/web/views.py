@@ -1,8 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from.models import Person
 # Create your views here.
 def home(request):
-    return HttpResponse('Hello its working')
+    list_result = Person.objects.all() #extracting data from database 
+    return HttpResponse (list_result)  #returning data view to home url /
 def about(request):
     return HttpResponse('This is about page')
 def contact(req):
