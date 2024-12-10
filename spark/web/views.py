@@ -10,6 +10,6 @@ def about(request):
 def contact(req):
     return HttpResponse("Its an contact page")
 def Index(req):
-    return HttpResponse("<marquee><h1> You are at index page </h1> </marquee>")
+    return HttpResponse("<h1> You are at index page </h1>")
 
  
