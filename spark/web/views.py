@@ -22,5 +22,7 @@ def contact(req):
     return HttpResponse("Its an contact page")
 def Index(req):
     return HttpResponse("<h1> You are at index page </h1>")
+def detail(request, person_id):
+    return HttpResponse("This is a id: %s" % person_id)
 
  
