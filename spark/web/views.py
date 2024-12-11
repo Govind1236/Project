@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from.models import Person
+from django.template import loader
 # Create your views here.
 def home(request):
     list_result = Person.objects.all() #extracting data from database 
-    return HttpResponse (list_result)  #returning data view to home url /
+    template = loader.get_template('Sparks/index.html')
+    context = {
+
+    }
+    return HttpResponse (template.render(context,request))  #returning data view to home url /
 def about(request):
     return HttpResponse('This is about page')
 def contact(req):
