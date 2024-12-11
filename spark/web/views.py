@@ -7,7 +7,7 @@ def home(request):
     list_result = Person.objects.all() #extracting data from database 
     template = loader.get_template('Sparks/index.html')
     context = {
-
+        'list_result': list_result,
     }
     return HttpResponse (template.render(context,request))  #returning data view to home url /
 def about(request):
