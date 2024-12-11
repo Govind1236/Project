@@ -1,6 +1,7 @@
 {% for person in list_result%}
-ID:{{person.id}} 
-Name:{{ person.person_name}} 
-Age: {{person.person_age}} 
-Number:{{person.person_num}}    
-{% endfor %}
+<ul>
+    <li>
+        ID:{{person.id}} Name:{{ person.person_name}} Age: {{person.person_age}} Number:{{person.person_num}} Address: {{person.person_address}}   
+    </li>
+</ul>
+{% endfor %}   
