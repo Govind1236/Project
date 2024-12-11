@@ -11,12 +11,13 @@ def home(request):
     }
     return HttpResponse (template.render(context,request))  #returning data view to home url /
 def about(request):
-    # list_result = Person.objects.all()
+    list_result = Person.objects.all()
     # temp = loader.get_template('Sparks/about.html')
-    # context = {
-    #    'list_results': list_result,
-    # }
-    return render(request, 'Sparks/about.html')
+    context = {
+       'list_result': list_result,
+    }
+    # return HttpResponse(temp.render(context,request))
+    return render(request,'Sparks/about.html',context)
 def contact(req):
     return HttpResponse("Its an contact page")
 def Index(req):

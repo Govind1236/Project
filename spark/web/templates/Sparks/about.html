@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    This is about Page
-</body>
-</html>
+{% for person in list_result%}
+<ul>
+    <li>
+        ID:{{person.id}} Name:{{ person.person_name}} Age: {{person.person_age}} Number:{{person.person_num}} Address: {{person.person_address}}   
+    </li>
+</ul>
+{% endfor %}    

@@ -9,3 +9,4 @@ class Person(models.Model):
     person_age = models.IntegerField(default=25)
     person_num = models.IntegerField() 
     person_address = models.TextField(null = True, blank = False )
+
