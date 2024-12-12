@@ -8,6 +8,6 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('index/',views.Index,name='index'),
     #/home/1
-    path('<int:person_id>/',views.detail,name='detail'),
+    path('detail/<int:person_id>/',views.detail,name='detail'),
     
 ]
