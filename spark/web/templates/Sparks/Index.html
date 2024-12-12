@@ -1,7 +1,7 @@
 {% for person in list_result%}
 <ul>
     <li>
-        ID:{{person.id}} {{ person.person_name}}  {{person.person_age}} {{person.person_num}}  {{person.person_address}}   
+        <a href="{%url 'web:detail' person.id %}">{{person.id}} {{ person.person_name}}  {{person.person_age}} {{person.person_num}}  {{person.person_address}} </a>
     </li>
 </ul>
 {% endfor %}   

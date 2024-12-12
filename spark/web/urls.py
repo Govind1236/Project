@@ -1,6 +1,7 @@
 from.import views
 from django.urls import path
 
+app_name = 'web'
 urlpatterns = [
     #/home/
     path('home/',views.home,name='home'),
@@ -8,6 +9,6 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('index/',views.Index,name='index'),
     #/home/1
-    path('detail/<int:person_id>/',views.detail,name='detail'),
+    path('home/<int:person_id>/',views.detail,name='detail'),
     
 ]

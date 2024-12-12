@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,get_object_or_404
 from django.http import HttpResponse
 from.models import Person
 from django.template import loader
@@ -23,7 +23,8 @@ def contact(req):
 def Index(req):
     return HttpResponse("<h1> You are at index page </h1>")
 def detail(request, person_id):
-    list = Person.objects.get(pk = person_id)
+    # list = Person.objects.get(pk = person_id)
+    list = get_object_or_404(Person, pk = person_id)
     context = {
         'list':list,
     }
