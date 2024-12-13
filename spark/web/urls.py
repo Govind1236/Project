@@ -7,7 +7,7 @@ urlpatterns = [
     path('home/',views.home,name='home'),
     path('about/',views.about,name='about'),
     path('contact/',views.contact,name='contact'),
-    path('index/',views.Index,name='index'),
+    path('',views.Index,name='index'),
     #/home/1
     path('home/<int:person_id>/',views.detail,name='detail'),
     
